@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Mozilla splash page</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style>
         /* header and body setup */
         
@@ -119,22 +119,33 @@
         <div class="further-info">
             <!-- insert images with srcsets and sizes -->
             <a href="https://www.mozilla.org/en-US/firefox/new/">
-                <img>
+                <img srcset="images/firefoxLogo120.png 120w,
+                images/firefoxLogo400.png 400w" sizes="(max-width: 480px) 80px,
+                360px" src="images/firefoxLogo400.png" alt="firefoxLogo">
             </a>
             <a href="https://www.mozilla.org/">
-                <img>
+                <img srcset="images/mozillaDinosaur120.png 120w,
+                images/mozillaDinosaur400.png 400w" sizes="(max-width: 480px) 80px,
+                360px" src="images/mozillaDinosaur400.png" alt="red dinosaur">
             </a>
             <a href="https://addons.mozilla.org/">
-                <img>
+                <img srcset="images/firefoxAddons120.png 120w,
+                images/firefoxAddons400.png 400w" sizes="(max-width: 480px) 80px,
+                360px" src="images/firefoxAddons400.png" alt="addons">
             </a>
             <a href="https://developer.mozilla.org/en-US/">
-                <img>
+                <img src="images/mdn.svg" alt="blue dinosaur">
             </a>
             <div class="clearfix"></div>
         </div>
 
         <div class="red-panda">
             <!-- insert picture element -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/redPanda600.png">
+                <source media="(min-width: 601px)" srcset="images/redPanda1200.png">
+                <img src="images/redPanda1200.png" alt="a red panda">
+            </picture>
         </div>
 
     </main>
